@@ -1,0 +1,131 @@
+* {
+    box-sizing: border-box;
+    margin: 10px;
+    padding: auto;
+}
+
+::-webkit-scrollbar {
+    width: 12px;
+    border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: linear-gradient(transparent, #ffffff);
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: linear-gradient(50deg, #ff0000, #000286);
+}
+
+body {
+    display: grid;
+    place-items: center;
+    height: 200vh;
+    background: #090d1d;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 480px;
+    height: auto;
+    padding: 1em;
+    text-align: center;
+    background: #4f6d7a;
+    border-radius: .1em;
+    color: #ffffff;
+    cursor: pointer;
+    overflow: hidden;
+    z-index: 1;
+}
+
+.card:hover {
+    color: rgb(0, 0, 0)
+}
+
+.container {
+    display: grid;
+    place-items: center;
+    position: relative;
+    width: 500;
+    height: auto;
+    border-radius: 1em;
+    background: linear-gradient(170deg, #ff1100, #035a00cb, #02005acb);
+    overflow: hidden;
+    background: linear-gradient(50deg, #ff6600, #5a0600cb, #02005acb);
+}
+
+.container::before {
+    content: "";
+    position: absolute;
+    width: 900px;
+    height: 100px;
+    top: 0;
+    right: 55px;
+    transition: 1.0s;
+    background: linear-gradient(50deg, #ff0000, #c50000);
+    transform: rotate(-45deg) translate(0, -100px);
+}
+
+.container:hover::before {
+    animation: cardEffect 3.0s;
+}
+
+@keyframes cardEffect {
+    500% {
+        transform: rotate(-45deg) translate(0, 600px);
+    }
+}
+
+@keyframes cardEffect {
+    40% {
+        transform: rotate(-45deg) translate(0, 1100px);
+    }
+}
+
+a {
+    font-weight: 800;
+    font-size: 40px;
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+}
+
+li {
+    float: left;
+    padding-left: 100px;
+}
+
+.header {
+    display: block;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 10%;
+    height: auto;
+    width: 17px;
+}
+
+.nav {
+    background: rgb(14, 21, 58);
+    margin-left: -40px;
+    overflow: hidden;
+    padding: 14px;
+}
+
+.nav a {
+    padding: 20px;
+    text-decoration: none;
+    text-align: center;
+    color: #05ffea;
+    font-size: 2.4em;
+    display: block;
+    float: left;
+}
+
+.nav a:hover {
+    background: #00ff4c;
+    color: #000000;
+}
